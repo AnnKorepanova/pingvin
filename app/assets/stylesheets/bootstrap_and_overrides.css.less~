@@ -1,4 +1,10 @@
 @import "twitter/bootstrap/bootstrap";
+
+body { 
+ background-repeat: no-repeat;
+ background: url(http://www.fullhdoboi.ru/_ph/3/557497440.jpg);
+ padding-top: 60px; }
+
 @import "twitter/bootstrap/responsive";
 
 // Set the correct sprite paths
