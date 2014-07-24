@@ -6,7 +6,8 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @article.title %></dd>
-  <p class="navbar-text"><%= @article.body %></p>
+  <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
+  <%= "\n\n\n#{@article.body}" %>
   <dt><strong>email: </strong></dt>
   <dd><%= @article.user.email %></dd>
 </dl>
