@@ -6,7 +6,7 @@ gem 'rails', '4.1.4'
 
 gem 'therubyracer'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+
 gem 'devise'
 gem 'rails_12factor'
 
