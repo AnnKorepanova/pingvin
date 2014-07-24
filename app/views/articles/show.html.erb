@@ -8,11 +8,14 @@
   <dd><%= @article.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
   <dd><%= @article.body %></dd>
+  <dt><strong>email: </strong></dt>
+  <dd><%= @article.user.email %></dd>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               articles_path, :class => 'btn'  %>
+	<% if user_signed_in? && @article.user == current_user  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_article_path(@article), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -20,4 +23,6 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+
+<% end %>
 </div>
